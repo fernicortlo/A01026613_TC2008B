@@ -20,6 +20,13 @@ for (let i=0; i<str.lenght; i++){
     console.log(frequency);
     return null;
 }
+
+for (let i=0; i<str.lenght; i++){
+    if(frequency[str[i]] === 1){
+        return str[i];
+    }
+}
+    
 }
 
 let result=NoRepeat("abacddbec");
