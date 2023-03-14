@@ -32,6 +32,7 @@ function PrimerCaracter(texto){
     }
     return;
 }
+console.log("Función 1. ");
 PrimerCaracter("abacddbecf");
 
 /*2. Escribe una función que implemente el algoritmo 'bubble-sort' 
@@ -56,12 +57,14 @@ function bubblesort(bubble){
         console.log(bubble[i]);
     }
 }
-
+console.log("Función 2.");
 bubblesort(bubble);
+
 
 // 3. Escribe dos funciones: la primera que invierta un arreglo de números y regrese un nuevo arreglo con el resultado; la segunda que modifique el mismo arreglo que se pasa como argumento. No se permite usar la función integrada 'reverse'.
  
-let arreglo=[1,2,3,4,5,6];
+let arreglo=[1,2,3,4,5,6,7];
+
 function invertir(arreglo){
     let nuevo=[];
     let array_length=arreglo.length;
@@ -71,7 +74,27 @@ function invertir(arreglo){
     return nuevo;
 
 }
-console.log(invertir(arreglo));
+console.log("Función 3: ");
+arreglo2 = invertir(arreglo);
+console.log("implementacion uno: ", invertir(arreglo));
+
+
+function invertir2(arreglo2){
+    let array_length = arreglo2.length;
+    let i = 0;
+    let j = array_length -1;
+    let temp;
+    while (i < j){
+        temp = arreglo2[i];
+        arreglo2[i]= arreglo2[j];
+        arreglo2[j]=temp;
+        i++;
+        j--;
+    }
+    return arreglo2;
+}
+
+console.log("implementacion 2: ", invertir2(arreglo2));
 
 // 4. Escribe una función que reciba una cadena de texto y regrese una nueva con la primer letra de cada palabra en mayúscula.
 let frase;
@@ -87,7 +110,7 @@ function mayusculas(frase){
     let unir=separation.join(" ");
     console.log(unir);
 }
-
+console.log("Función 4 ");
 mayusculas(frase);
 
 // 5. Escribe una función que calcule el máximo común divisor de dos números.
@@ -103,8 +126,8 @@ function mcd(num1, num2){
     }
     return num2;
 }
-
-mcd(num1, num2);
+console.log("Función 5: ");
+console.log(mcd(num1, num2));
 
 // 6. Crea una función que cambie una cadena de texto a 'Hacker Speak'. Por ejemplo, para la cadena 'Javascript es divertido', su hacker speak es: 'J4v45c1pt 35 d1v3rt1d0'.
 let quote;
@@ -137,7 +160,7 @@ let quote;
         let unir=separation.join(" ");
         console.log(unir);
 }
-
+console.log("Función 6 ");
 hackerspeak(quote);
 
 // 7. Escribe una función que reciba un número, y regrese una lista con todos sus factores. Por ejemplo: factoriza(12) -> [1, 2, 3, 4, 6, 12].
@@ -155,8 +178,8 @@ function factoriza(number){
     }
     return factores;
 }
-
-factoriza(number);
+console.log("Función 7: ");
+console.log(factoriza(number));
 
 // 8. Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. 
 //Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]
@@ -176,6 +199,7 @@ function quitarDuplicados(arr) {
     }
     return out;
   }
+console.log("Función 8 ");
 console.log(quitarDuplicados(arr));
 
 // 9. Escribe una función que reciba como parámetro una lista de cadenas de texto, y regrese la longitud de la cadena más corta.
@@ -194,7 +218,7 @@ function cadena_corta(cadenas){
     return;
   
 }
-
+console.log("Función 9 ");
 cadena_corta(cadenas);
 
 // 10. Escribe una función que revise si una cadena de texto es un palíndromo o no.
@@ -215,7 +239,7 @@ function palindromo(palind) {
     return;
   }
   
-  
+console.log("Función 10");  
 palindromo(palind);
 
 //11. Escribe una función que tome una lista de cadena de textos y devuelva una nueva lista con todas las cadenas en orden alfabético.
@@ -224,6 +248,7 @@ function sortStrings(strings) {
   }
   const unsortedArray = ["emo", "fer", "fer", "asha", "lu"];
   const sortedArray = sortStrings(unsortedArray);
+  console.log("Función 11 ");  
   console.log(sortedArray);
 
 /*12. Escribe una función que tome una lista de números
@@ -267,6 +292,7 @@ function medianamoda(lista){
     }
     console.log("La moda es",moda);
 }
+console.log("Función 12 ");  
 medianamoda(lista)
 
 //13.Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
@@ -298,8 +324,10 @@ function mostFrequentString(list) {
   
   const stringList = ['emo', 'emo', 'fer', 'fer', 'lu', 'lu', 'lu'];
   const frequentString = mostFrequentString(stringList);
+  console.log("Función 13 ");  
   console.log(frequentString);
 
+console.log("Función 14 ");  
 //14. Escribe una función que tome un número y devuelva verdadero si es una potencia de dos, falso de lo contrario.
 function PowerofTwo(n){
     //Check if the given number is a positive value
@@ -321,7 +349,7 @@ if (PowerofTwo(n)==true)
 else
     console.log("False \n");
 
-//Escribe una función que tome una lista de números y devuelva 
+//15. Escribe una función que tome una lista de números y devuelva 
 //una nueva lista con todos los números en orden descendente.
 function Desencing (Mylist){
     // Iterate through the array 
@@ -339,6 +367,7 @@ function Desencing (Mylist){
         }
     }
 }
+console.log("Función 15 ");  
 let Mylist =[1,23,99,33,12];
 Desencing(Mylist);
 console.log(Mylist);
