@@ -3,7 +3,8 @@
     Emilia Salazar - A0
     Ma. Fernanda Cortés Lozano - A01026613
     Ma. Fernanda Osorio Arroyo - A0
-    Lucia Barrenchea - A0 
+    Lucia Barrenchea - A0
+    
     Actividad en clase: Javascript
 */
 
@@ -50,7 +51,7 @@ function bubblesort(bubble){
                 bubble[j+1]=x; 
         }
     }}
-    //EL siguiente for imprime la cadena bubble ya acomodada
+    //El siguiente for imprime la cadena bubble ya acomodada
     for(let i=0; i<longitud;i++){
         console.log(bubble[i]);
     }
@@ -157,27 +158,25 @@ function factoriza(number){
 
 factoriza(number);
 
-// 8. Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]
-let arr=[1, 0, 1, 1, 0, 0];
+// 8. Escribe una función que quite los elementos duplicados de un arreglo y regrese una lista con los elementos que quedan. 
+//Por ejemplo: quitaDuplicados([1, 0, 1, 1, 0, 0]) -> [1, 0]
+let arr = [1, 0, 1, 1, 0, 0]
 
-function duplicados(arr){
-    let array_length = arr.length;
-    let nodup=[];
-    let nono=[];
-    console.log(array_length);
-    for (let i=0; i < array_length; i++){
-        if (arr[i]){
-            nodup.push(arr[i]);
-        }
-        else{
-       
-        }
-
-    }
+function quitarDuplicados(arr) {
+    var x,
+        len=arr.length,
+        out=[],
+        obj={};
    
-}
-
-duplicados(arr);
+    for (x=0; x<len; x++) {
+      obj[arr[x]]=0;
+    }
+    for (x in obj) {
+      out.push(x);
+    }
+    return out;
+  }
+console.log(quitarDuplicados(arr));
 
 // 9. Escribe una función que reciba como parámetro una lista de cadenas de texto, y regrese la longitud de la cadena más corta.
 
@@ -223,19 +222,52 @@ palindromo(palind);
 function sortStrings(strings) {
     return strings.sort();
   }
-  const unsortedArray = ["emo", "fer", "asha", "lu"];
+  const unsortedArray = ["emo", "fer", "fer", "asha", "lu"];
   const sortedArray = sortStrings(unsortedArray);
   console.log(sortedArray);
 
-
-let numbers = [1,2,3,4,5]
 /*12. Escribe una función que tome una lista de números
 y devuelva la mediana y la moda. */
-function Mean(numbers){
-    let sum = 0;
-
+let lista;
+lista=[1,2,3,4,4,7,8,8,9,10];
+function medianamoda(lista){
+    let longitud;
+    longitud=lista.length;
+    // 
+    //esta es la mediana
+    if(longitud%2==0){
+        let y;
+        let x;
+        let y2;
+        y=lista[longitud/2];
+        y2=lista[longitud/2 - 1];
+        x=(y+y2)/2;
+        console.log("La mediana es: ", x);
+    }
+    else{ //esto es impar
+        let z;
+        z=longitud/2-0.5;
+        console.log("La mediana es: ",lista[z]);
+    }
+    let frec={};
+    let maxfrec = 0;
+    let moda;
+    for(let num of lista){
+        if(!frec[num]){
+            frec[num] = 1;
+        }
+        else{
+            frec[num]++;
+        }
+        if(frec[num]>maxfrec){
+            maxfrec = frec[num];
+            moda = num;
+        }
+        
+    }
+    console.log("La moda es",moda);
 }
-
+medianamoda(lista)
 
 //13.Escribe una función que tome una lista de cadenas de texto y devuelva la cadena más frecuente.
 function mostFrequentString(list) {
@@ -289,7 +321,8 @@ if (PowerofTwo(n)==true)
 else
     console.log("False \n");
 
-
+//Escribe una función que tome una lista de números y devuelva 
+//una nueva lista con todos los números en orden descendente.
 function Desencing (Mylist){
     // Iterate through the array 
         for (let i = 0; i < Mylist.length; i++) {
