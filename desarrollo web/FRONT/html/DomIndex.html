@@ -7,8 +7,8 @@
     <title>Eventos y Dom</title>
 </head>
 
-<body>
-    <h1>Eventos y DOM y ChatGPT</h1>
+<body style="background-color:rgb(250, 240, 226);">
+    <h1 class="header">Eventos y DOM y ChatGPT</h1>
 
     <div class="container">
         <h2>Instrucciones</h2>
@@ -18,74 +18,77 @@
     </div>
 
     <div class="container">
-        <h3>Preguntas</h3>
+        <h3 class="header">Preguntas</h3>
         <ol>
-            <li>¿Qué es el DOM?</li>
+            <li class="ques">¿Qué es el DOM?</li>
             <h5 class="gpt" > ChatGPT </h5>
-            <p> </p>
+            <p> El Modelo de Objetos del Documento (DOM, por sus siglas en inglés) es una representación en memoria de un documento HTML que permite a los navegadores web y otros programas acceder y manipular la estructura, el contenido y el estilo del documento. En otras palabras, el DOM es un árbol jerárquico de objetos que representa cada elemento, atributo y texto en un documento HTML, y que puede ser manipulado mediante JavaScript para agregar, eliminar o modificar elementos y contenido en tiempo real. El DOM es esencial para la creación de páginas web interactivas y dinámicas, y es una parte fundamental del desarrollo web moderno. </p>
 
             <h5 class="cop"> Copilot </h5>
             <p> El DOM es la representación de un documento HTML en forma de árbol de nodos.</p>
 
-            <li>¿Qué es un nodo?</li>
+            <li class="ques">¿Qué es un nodo?</li>
             <h5 class="gpt" > ChatGPT </h5>
-            <p> </p>
+            <p> En el contexto del Modelo de Objetos del Documento (DOM), un nodo es un objeto que representa un elemento, atributo o texto dentro de un documento HTML. Cada nodo en el árbol del DOM tiene un tipo, un valor (si corresponde) y cero o más nodos secundarios (también conocidos como hijos).</p>
 
             <h5 class="cop"> Copilot </h5>
             <p> Un nodo es un elemento del árbol DOM, por ejemplo, un elemento HTML, un texto, un comentario, etc.</p>
 
-            <li>¿Cómo se accede a un elemento del DOM?</li>
+            <li class="ques">¿Cómo se accede a un elemento del DOM?</li>
             <h5 class="gpt" > ChatGPT </h5>
-            <p> </p>
-
+            <p> Para acceder a un elemento específico del DOM, primero debe identificar su ubicación en la jerarquía del árbol del DOM.</p>
+            <p> Se puede acceder por: ID, nombre de la etiqueta o a traves de una clase de css</p>
+            
             <h5 class="cop"> Copilot </h5>
             <p> Se accede a un elemento del DOM a través de su ID, por ejemplo, document.getElementById("id_del_elemento")</p>
 
-            <li>¿Cómo se modifica un elemento del DOM?</li>
+            <li class="ques">¿Cómo se modifica un elemento del DOM?</li>
             <h5 class="gpt" > ChatGPT </h5>
-            <p> </p>
+            <p> Para modificar un elemento específico del DOM, primero debe acceder al elemento utilizando alguno de los métodos de acceso del DOM como getElementById(), getElementsByTagName() o getElementsByClassName(), como se mencionó anteriormente. Luego, puede utilizar las propiedades y métodos de la API de JavaScript del DOM para modificar el elemento.<p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> Se modifica un elemento del DOM a través de su ID, por ejemplo, document.getElementById("id_del_elemento").innerHTML = "Nuevo texto"</p>
 
-            <li>¿Cuál es la diferencia entre getElementby* y querySelector*?</li>
+            <li class="ques">¿Cuál es la diferencia entre getElementby* y querySelector*?</li>
             <h5 class="gpt" > ChatGPT </h5>
-            <p> </p>
+            <p> La diferencia principal entre los métodos "getElementBy*" y "querySelector*" en la API de JavaScript del DOM es que el primero solo puede acceder a los elementos utilizando su ID, etiqueta o nombre de clase, mientras que el segundo puede acceder a los elementos utilizando selectores CSS más complejos. </p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> getElementby* devuelve un elemento, querySelector* devuelve una lista de elementos </p>
 
-            <li>¿Qué es un evento?</li>
+            <li class="ques">¿Qué es un evento?</li>
             <h5 class="gpt"> ChatGPT </h5>
-            <p> </p>
+            <p> En HTML, un evento es una acción que ocurre en un elemento HTML y que puede ser detectada y manejada por el navegador web. Los eventos en HTML se utilizan principalmente para crear páginas web interactivas que respondan a las acciones del usuario. </p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> Un evento es una acción que se produce en un elemento del DOM, por ejemplo, un click, un cambio de valor, etc.</p>
 
-            <li>¿Qué es un listener?</li>
+            <li class="ques">¿Qué es un listener?</li>
             <h5 class="gpt"> ChatGPT </h5>
-            <p> </p>
+            <p> En el contexto de la programación web, un "event listener" es una función que se ejecuta cuando se produce un evento en un elemento HTML, como hacer clic en un botón, mover el ratón, presionar una tecla o cambiar el tamaño de la ventana del navegador. Los "event listeners" se utilizan para crear páginas web interactivas que respondan a las acciones del usuario.</p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> Un listener es una función que se ejecuta cuando se produce un evento en un elemento del DOM</p>
 
-            <li>¿Qué es un callback?</li>
+            <li class="ques">¿Qué es un callback?</li>
             <h5 class="gpt"> ChatGPT </h5>
-            <p> </p>
+            <p> En programación, un "callback" es una función que se pasa como argumento a otra función y que se ejecuta después de que se complete la función original.
+
+            </p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> Un callback es una función que se pasa como parámetro a otra función</p>
             
-            <li>¿Qué es un objeto de evento?</li>
+            <li class="ques">¿Qué es un objeto de evento?</li>
             <h5 class="gpt"> ChatGPT </h5>
-            <p> </p>
+            <p> En el contexto de la programación web, un objeto de evento se utiliza para representar un evento que ha ocurrido en un elemento HTML, como hacer clic en un botón, mover el ratón o presionar una tecla.</p>
 
             <h5 class="cop"> Copilot </h5>
-            <p> </p>
+            <p> Un objeto de evento es un objeto que se pasa como parámetro a una función callback</p>
         </ol>        
     </div>
 
-    <h3>Ejercicios de código</h3>
+    <h3 class="header">Ejercicios de código</h3>
     <p>Usa ChatGPT y copilot para resolver los ejercicios. Por cada ejercicio, pídele a ChatGPT o a copilot que te genere los comentarios. Verifica los resultados antes de subirlos a tu repo.</p>
 
     <div class="container">
@@ -163,7 +166,7 @@
     </div>
 
     <div class="container">
-        <h2>Conclusiones</h2>
+        <h2 class="header">Conclusiones</h2>
 
         <h4>Experiencia general</h4>
         <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>

@@ -11,10 +11,30 @@ table, td{
     border: 1px solid black;
 }
 
+.header{
+    background-color: rgb(246, 237, 180);
+    text-align: center;
+    font-weight: bold;
+}
+
 .gpt{
-    color: skyblue;
+    color: rgb(117, 178, 203);
+    text-align: center;
 }
 
 .cop{
     color: rgb(213, 135, 235);
+    text-align: center;
+}
+
+.ques{
+    color: rgb(162, 196, 143);
+    font-weight:bold;
+}
+
+p{
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:lighter;
+    font-size: small;
 }
