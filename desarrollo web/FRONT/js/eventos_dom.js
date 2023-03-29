@@ -25,7 +25,7 @@
 //q: ¿Qué es un objeto de evento?
 //r: Un objeto de evento es un objeto que se pasa como parámetro a una función callback
 
-// 1
+// 1.
 // ; Chat GPT
     // Get the <span> element that will display the mouse position
     var mousePositionElement = document.getElementById("mousePosition");
@@ -48,7 +48,7 @@ document.addEventListener("mousemove", function(event) {
    mousePositionCopilot.innerHTML = x
  });
 
-// 2
+// 2.
 //; Chat GPT
     // Se obtiene el formulario y se agrega un controlador de eventos para el evento "submit"
     var form = document.getElementById("form1");
@@ -84,7 +84,7 @@ form.addEventListener("submit", function(event) {
     document.getElementById("form2-submit").insertAdjacentElement("afterend", p);
 });
 
-// 3
+// 3.
 //; Chatgpt
       var table = document.getElementById("sampleTable");
     
@@ -111,35 +111,8 @@ form.addEventListener("submit", function(event) {
       }
     });
 
-//; Copilot
-// Se obtiene la tabla
-var table = document.getElementById("sampleTable1");
-// Se agrega un controlador de eventos para el botón de insertar fila
-var btnInsertRow1 = document.getElementById("btn-insert-r1");
-btnInsertRow.addEventListener("click", function() {
-    // Se crea una nueva fila
-    var newRow = table.insertRow();
-    // Se crean dos nuevas celdas en la fila
-    var newCell1 = newRow.insertCell();
-    var newCell2 = newRow.insertCell();
-    // Se establece el contenido de las celdas
-    newCell1.innerHTML = "New row column 1";
-    newCell2.innerHTML = "New row column 2";
-});
-// Se agrega un controlador de eventos para el botón de insertar columna
-var btnInsertColumn1 = document.getElementById("btn-insert-c1");
-btnInsertColumn1.addEventListener("click", function() {
-    // Se recorre cada fila de la tabla y se inserta una celda al final de cada fila
-    for (var i = 0; i < table.rows.length; i++) {
-        var newRowCell = table.rows[i].insertCell();
-        newRowCell.innerHTML = "New column";
-    }
-});
 
-
-
-
-// 4
+// 4.
 //; Chatgpt
 // Obtener los elementos HTML
 var rowIndexElement = document.getElementById("rowIndex");
@@ -177,9 +150,45 @@ changeButton.addEventListener("click", function() {
     cell.innerHTML = newValue;
 });
 
+//; Copilot
+// Obtener los elementos HTML
+var rowIndexElement = document.getElementById("rowIndex1");
+var colIndexElement = document.getElementById("colIndex1");
+var newValueElement = document.getElementById("newValue1");
+var tableElement = document.getElementById("myTable1");
+var changeButton = document.getElementById("btn-change1");
+
+// Agregar un event listener al botón de cambio
+changeButton.addEventListener("click", function() {
+    // Obtener los valores de entrada y convertirlos a números
+    var rowIndex1 = parseInt(rowIndexElement.value);
+    var colIndex1 = parseInt(colIndexElement.value);
+    var newValue1 = newValueElement.value;
+
+    // Validar los valores de entrada
+    if (isNaN(rowIndex) || isNaN(colIndex) || rowIndex < 1 || colIndex < 1) {
+        alert("Invalid input: row and column indices must be positive integers.");
+        return;
+    }
+
+    // Obtener la fila y celda correspondientes en la tabla
+    var row = tableElement.rows[rowIndex - 1];
+    if (!row) {
+        alert("Invalid input: row index out of range.");
+        return;
+    }
+    var cell = row.cells[colIndex - 1];
+    if (!cell) {
+        alert("Invalid input: column index out of range.");
+        return;
+    }
+
+    // Actualizar el valor de la celda
+    cell.innerHTML = newValue;
+});
 
 
-// 5
+// 5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.
 //; Chatgpt
 var addColorBtn = document.getElementById("btn-add-color");
 addColorBtn.addEventListener("click", function() {
@@ -198,7 +207,6 @@ rmvColorBtn.addEventListener("click", function() {
 });
 
 //; copilot
-//  5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.
 var addColorBtn = document.getElementById("btn-add-color1");
 addColorBtn.addEventListener("click", function() {
     var select = document.getElementById("colorSelect1");
@@ -207,6 +215,7 @@ addColorBtn.addEventListener("click", function() {
     option.text = newColor;
     select.add(option);
 });
+
 var rmvColorBtn = document.getElementById("btn-rmv-color1");
 rmvColorBtn.addEventListener("click", function() {
     var select = document.getElementById("colorSelect1");
@@ -217,7 +226,7 @@ rmvColorBtn.addEventListener("click", function() {
 
 
 
-// 6
+// 6. Agrega el código para que al pasar el mouse sobre la imagen, se cambie por otra imagen de tamaño aleatorio.
 //; Chatgpt
   // Get the image element
   var imagenGatoElement = document.getElementById("imagenGato");
@@ -235,7 +244,6 @@ rmvColorBtn.addEventListener("click", function() {
   });
 
 //; Copilot
-//  6. Agrega el código para que al pasar el mouse sobre la imagen, se cambie por otra imagen de tamaño aleatorio.
 // Get the image element
 var imagenGatoElement1 = document.getElementById("imagenGato1");
 // Add an event listener to the image element that will replace the image source with a new image of random size on mouseover
@@ -248,10 +256,4 @@ imagenGatoElement1.addEventListener("mouseover", function() {
     newImage.src = "http://placekitten.com/" + randomWidth + "/" + randomHeight;
     // Replace the image source with the new image
     imagenGatoElement1.src = newImage.src;
-}
-);
-
-
-
-
-
+});
