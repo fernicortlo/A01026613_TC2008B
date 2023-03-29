@@ -25,6 +25,7 @@
 //q: ¿Qué es un objeto de evento?
 //r: Un objeto de evento es un objeto que se pasa como parámetro a una función callback
 
+// 1
 // ; Chat GPT
     // Get the <span> element that will display the mouse position
     var mousePositionElement = document.getElementById("mousePosition");
@@ -47,6 +48,7 @@ document.addEventListener("mousemove", function(event) {
    mousePositionCopilot.innerHTML = x
  });
 
+// 2
 //; Chat GPT
     // Se obtiene el formulario y se agrega un controlador de eventos para el evento "submit"
     var form = document.getElementById("form1");
@@ -82,6 +84,7 @@ form.addEventListener("submit", function(event) {
     document.getElementById("form2-submit").insertAdjacentElement("afterend", p);
 });
 
+// 3
 //; Chatgpt
       var table = document.getElementById("sampleTable");
     
@@ -136,10 +139,7 @@ btnInsertColumn1.addEventListener("click", function() {
 
 
 
-
-
-
-
+// 4
 //; Chatgpt
 // Obtener los elementos HTML
 var rowIndexElement = document.getElementById("rowIndex");
@@ -177,6 +177,9 @@ changeButton.addEventListener("click", function() {
     cell.innerHTML = newValue;
 });
 
+
+
+// 5
 //; Chatgpt
 var addColorBtn = document.getElementById("btn-add-color");
 addColorBtn.addEventListener("click", function() {
@@ -194,6 +197,27 @@ rmvColorBtn.addEventListener("click", function() {
   select.remove(index);
 });
 
+//; copilot
+//  5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.
+var addColorBtn = document.getElementById("btn-add-color1");
+addColorBtn.addEventListener("click", function() {
+    var select = document.getElementById("colorSelect1");
+    var newColor = "Blue"; // Cambiar por un color aleatorio
+    var option = document.createElement("option");
+    option.text = newColor;
+    select.add(option);
+});
+var rmvColorBtn = document.getElementById("btn-rmv-color1");
+rmvColorBtn.addEventListener("click", function() {
+    var select = document.getElementById("colorSelect1");
+    var index = select.selectedIndex;
+    select.remove(index);
+});
+
+
+
+
+// 6
 //; Chatgpt
   // Get the image element
   var imagenGatoElement = document.getElementById("imagenGato");
@@ -209,6 +233,23 @@ rmvColorBtn.addEventListener("click", function() {
     // Replace the image source with the new image
     imagenGatoElement.src = newImage.src;
   });
+
+//; Copilot
+//  6. Agrega el código para que al pasar el mouse sobre la imagen, se cambie por otra imagen de tamaño aleatorio.
+// Get the image element
+var imagenGatoElement1 = document.getElementById("imagenGato1");
+// Add an event listener to the image element that will replace the image source with a new image of random size on mouseover
+imagenGatoElement1.addEventListener("mouseover", function() {
+    // Generate random width and height between 300 and 600
+    var randomWidth = Math.floor(Math.random() * (600 - 300 + 1) + 300);
+    var randomHeight = Math.floor(Math.random() * (600 - 300 + 1) + 300);
+    // Create a new image with random size
+    var newImage = new Image();
+    newImage.src = "http://placekitten.com/" + randomWidth + "/" + randomHeight;
+    // Replace the image source with the new image
+    imagenGatoElement1.src = newImage.src;
+}
+);
 
 
 
