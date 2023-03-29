@@ -20,9 +20,9 @@
     <div class="container">
         <h3 class="header">Preguntas</h3>
         <ol>
-            <li class="ques">¿Qué es el DOM?</li>
+            <li class="ques">¿Qué es el DOM?</li> 
             <h5 class="gpt" > ChatGPT </h5>
-            <p> El Modelo de Objetos del Documento (DOM, por sus siglas en inglés) es una representación en memoria de un documento HTML que permite a los navegadores web y otros programas acceder y manipular la estructura, el contenido y el estilo del documento. En otras palabras, el DOM es un árbol jerárquico de objetos que representa cada elemento, atributo y texto en un documento HTML, y que puede ser manipulado mediante JavaScript para agregar, eliminar o modificar elementos y contenido en tiempo real. El DOM es esencial para la creación de páginas web interactivas y dinámicas, y es una parte fundamental del desarrollo web moderno. </p>
+            <p>  El Modelo de Objetos del Documento (DOM, por sus siglas en inglés) es una representación en memoria de un documento HTML que permite a los navegadores web y otros programas acceder y manipular la estructura, el contenido y el estilo del documento. En otras palabras, el DOM es un árbol jerárquico de objetos que representa cada elemento, atributo y texto en un documento HTML, y que puede ser manipulado mediante JavaScript para agregar, eliminar o modificar elementos y contenido en tiempo real. El DOM es esencial para la creación de páginas web interactivas y dinámicas, y es una parte fundamental del desarrollo web moderno. </p>
 
             <h5 class="cop"> Copilot </h5>
             <p> El DOM es la representación de un documento HTML en forma de árbol de nodos.</p>
@@ -93,20 +93,36 @@
 
     <div class="container">
         <p>1. Modifica el siguiente elemento para mostrar la posición del mouse en el documento:</p>
-        <p id="mousePosition">Posición del mouse: </p>
+        <p>Posición del mouse: </p>
+        <h5 class="gpt"> ChatGPT </h5>
+        <p id="mousePosition"> Posición </p>
+
+        <h5 class="cop"> Copilot </h5>
+        <p id="mousePositionC" > Posición </p>
     </div>
 
     <div class="container">
         <p>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga el nombre completo.</p>
+        <h5 class="gpt"> ChatGPT </h5>
         <form id="form1">
             First name: <input id="form-fname" type="text" name="fname" ><br>
             Last name: <input id="form-lname" type="text" name="lname" ><br><br>
         <input id="form1-submit" type="submit" value="Submit">
         </form>
-    </div>
+        <p id="nombreCompleto"></p>
+
+        <h5 class="cop"> Copilot </h5>
+        <form id="form2">
+            First name: <input id="form2-fname" type="text" name="fname" ><br>
+            Last name: <input id="form2-lname" type="text" name="lname" ><br><br>
+        <input id="form2-submit" type="submit" value="Submit">
+        </form>
+        <p id="nombreCompletoC"></p>
+</div>
 
     <div class="container">
         <p>3. Agrega el código para agregar una fila, o una columna, a la siguiente tabla al dar click al botón correspondiente.</p>
+        <h5 class="gpt"> ChatGPT </h5>
         <table id="sampleTable">
             <tr>
                 <td>Row 1 column 1</td>
@@ -119,10 +135,25 @@
         </table><br>
         <input id="btn-insert-r" type="button" value="Insert row">
         <input id="btn-insert-c" type="button" value="Insert column">
+
+        <h5 class="cop"> Copilot </h5>
+        <table id="sampleTable1">
+            <tr>
+                <td>Row 1 column 1</td>
+                <td>Row 1 column 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 column 1</td>
+                <td>Row 2 column 2</td>
+            </tr>
+        </table><br>
+        <input id="btn-insert-r1" type="button" value="Insert row">
+        <input id="btn-insert-c1" type="button" value="Insert column">
     </div>
 
     <div class="container">
         <p>4. Incluye dos cajas de input, para solicitar al usuario la posición de la fila y columna de la siguiente tabla, y otra para solicitar un texto. Al apretar el botón, actualiza el contenido de esa tabla en la posición que solicitaste, con la cadena de texto que solicitaste.</p>
+        <h5 class="gpt"> ChatGPT </h5>
         <table id="myTable">
             <tr>
                 <td>Row1 cell1</td>
@@ -144,10 +175,13 @@
             <input id="colIndex" type="text" placeholder="Col Index">
             <input id="newValue" type="text" placeholder="New Value">
             <input id="btn-change" type="button" value="Change content">
+
+        <h5 class="cop"> Copilot </h5>
     </div>
 
     <div class="container">
         <p>5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</p>
+        <h5 class="gpt"> ChatGPT </h5>
         <form>
             <select id="colorSelect">
                 <option>Red</option>
@@ -158,16 +192,21 @@
             <input id="btn-add-color" type="button" value="Add color">
             <input id="btn-rmv-color" type="button" value="Remove color">
         </form>
+
+        <h5 class="cop"> Copilot </h5>
     </div>
 
     <div class="container">
         <p>6. Al poner el mouse encima de la siguiente imagen, genera dos números aleatorios entre 300 y 600 para el width y height de una imagen. Reemplaza la imagen de placeholder por otra similar con el tamaño random que generaste. El evento solo se dispara cuando el mouse entra en la imagen.</p>
+        <h5 class="gpt"> ChatGPT </h5>
         <img id="imagenGato" src="http://placekitten.com/200/300">
+
+        <h5 class="cop"> Copilot </h5>
+        
     </div>
 
     <div class="container">
         <h2 class="header">Conclusiones</h2>
-
         <h4>Experiencia general</h4>
         <h4>¿Cuándo y para qué usarías ChatGPT y cuándo Copilot?</h4>
         <h4>Ventajas de usar AI para programar</h4>
